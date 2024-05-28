@@ -1,8 +1,6 @@
 use std::collections::HashSet;
 use std::collections::VecDeque;
-use std::io;
 use std::io::BufRead;
-use std::process;
 use std::str::FromStr;
 
 use clap::command;
@@ -58,7 +56,7 @@ impl RegEx {
         false
     }
 
-    fn search_from(&self, start: usize, mut s: &[char]) -> bool {
+    fn search_from(&self, _start: usize, mut s: &[char]) -> bool {
         for token in self.tokens.iter() {
             if s.is_empty() {
                 return false;
