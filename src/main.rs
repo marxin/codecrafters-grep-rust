@@ -10,7 +10,7 @@ use clap::Parser;
 #[command(version, about)]
 struct Args {
     /// Extended expression
-    #[arg(short)]
+    #[arg(short = 'E')]
     extended: String,
 }
 
